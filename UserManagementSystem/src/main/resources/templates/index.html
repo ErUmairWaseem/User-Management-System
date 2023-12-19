@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.tyhmeleaf.org"
+	 xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+	<head th:replace="partials/head :: head_section('Welcome Home Page')"></head>
+
+<body>
+
+	<!--  NAVBAR -->
+		<div th:replace="partials/_navbar :: mynavbar"></div>
+	<!--  /NAVBAR -->
+
+
+<!--  CONTAINER -->
+	<div class="container-fluid" style="height:62.8vh;">
+	
+	
+	
+			Welcome &nbsp;
+			<a 	th:href="@{/account}"
+		   		sec:authentication="principal.username">	
+		    </a>
+			
+			<span sec:authentication="principal.authorities"></span>
+			
+			<h4 class="text-center"> DashBoard</h4>
+					
+			<div class="row rowStyle" >
+			      <div class="col-md-5 mb-5" >
+			            <div class="card text-center " >
+			            
+			            	<div class="card-header text-center" style="font-size:1.4rem;">Roles size : <span><strong>[[${roleSize}]]</strong></span></div>
+			            
+			                  <div class="card-body"  >
+			                  	<div th:each="role : ${allRoles}" >
+									<h5>[[${role.name}]]</h5>
+								</div>
+		                     
+			                        
+			                  </div>
+		                 </div>
+			      </div>
+			      
+			     <div class="col-md-5 ">
+			            <div class="card justify-content-center" >
+			            
+			            	<div class="card-header text-center">Users  : <span><strong>[[${userSize}]]</strong></span></div>
+			            
+			                  <div class="card-body">
+			                  	<div th:each="user : ${allUsers}">
+									<h5>[[${user.id}]]  -   [[${user.firstName}]]</h5>
+								</div>
+		                     
+			                        
+			                  </div>
+		                 </div>
+			      </div>
+			      
+			</div>
+			
+
+	<!--  /CONTAINER -->
+
+	
+	<!--  FOOTER -->
+	<div th:replace="partials/_footer :: myfooter"></div>
+	<!--  /FOOTER -->
+
+</body>
+</html>

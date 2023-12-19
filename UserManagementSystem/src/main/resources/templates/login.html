@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.tyhmeleaf.org">
+
+	<head th:replace="partials/head :: head_section('Login Page')"></head>
+
+
+
+<body >
+
+	
+	<div class="container-fluid text-center">
+		
+			<div class="row">
+					<div class="col-md-6">
+						
+						<img th:src="@{/images/loginmng.png}" class="image-fluid w-100"/>
+	
+					</div>
+					<div class="col-md-6">
+							<form method="POST" th:action="@{/login}" style="max-width:550px; margin:9rem auto;">
+						
+									<!--  login err message -->
+									<div th:if="${param.error}">
+											<p class="text-danger ">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
+									</div>
+								
+									<!--  logout err message -->
+									<div th:if="${param.logout}">
+											<p class="text-warning bg-dark">You have been logged out.</p>
+									</div>
+								
+								
+									<div class="p-4 mt-4 loginForm"  >
+											<p>Admin Control Panel <i class="fas fa-forward fa-2x offset-1"></i></p>
+											
+											<p>
+												<input type="email"  name="email" required class="form-control" placeholder="E-mail" />
+											</p>
+											
+											 <p>
+											 	<input type="password" name="password" required class="form-control" placeholder="Password" />
+											 </p>
+											 
+											 <p>
+											 	<input type="checkbox" name="remember-me" />&nbsp;Remember me
+											 </p>
+											 
+											 <p>
+											 	<input type="submit" value="Login" class="btn btn-primary" />
+											 </p>
+									</div>
+							</form>
+					</div>
+			</div>
+		
+	</div>
+	
+	 <div th:replace="partials/_footer :: myfooter">
+	 
+	 </div>
+
+</body>
+</html>

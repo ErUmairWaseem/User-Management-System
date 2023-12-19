@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.tyhmeleaf.org"
+	 xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+	<head th:replace="partials/head :: head_section('Welcome Home Page')"></head>
+
+<body >
+	
+	<!--  NAVBAR -->
+		<div th:replace="partials/_navbar :: mynavbar"></div>
+	<!--  /NAVBAR -->
+   
+    <!--adding image at start-->
+    <div class="row">
+      <img src="./images/contact-us-banner.jpg" alt="" />
+    </div>
+    <hr />
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-sm-12  text-primary">
+        <h1>Let’s start a conversation.</h1>
+        <h1>We’d love to hear from you!</h1>
+        <h6 class="text-dark my-3">
+          Browse our directory of service providers, or post a request and have
+          providers respond to you directly. If you'd like to offer your own
+          services, sign up today.
+        </h6>
+      </div>
+    </div>
+    <hr />
+    <!--making the contact row-->
+    <div class="row justify-content-between mx-4">
+      <div class="col-lg-4 col-sm-12 my-3">
+        <div>
+          <div class="d-flex text-primary">
+            <div>
+              <h3><i class="fa fa-phone"></i></h3>
+            </div>
+            <div><h4>&nbsp Talk to Our Team Member</h4></div>
+          </div>
+          <div class="mx-2">022 4246 0606</div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-12 my-3">
+        <div>
+          <div class="d-flex text-primary">
+            <div>
+              <h3><i class="fa fa-building"></i></h3>
+            </div>
+            <div><h4>&nbsp Come Say Hello</h4></div>
+          </div>
+          <div class="mx-2">
+            Raintree Marg, near Bharati Vidyapeeth, Sector 7, CBD Belapur, Navi Mumbai, Maharashtra 400614
+            0222 756 5303
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-12 my-3">
+        <div>
+          <div class="d-flex text-primary">
+            <div>
+              <h3><i class="fa fa-envelope"></i></h3>
+            </div>
+            <div><h4>&nbsp Share Your Thoughts</h4></div>
+          </div>
+          <div class="mx-2">rishikaran0706@gmail.com</div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="row justify-content-center fs-2 mt-4" style="background: rgb(0, 255, 64)">
+      Questions not yet answered? Contact us
+    </div>
+    <!--making the contact us form-->
+    <div
+      class="row justify-content-center text-primary"
+      style="background: #87CEFA"
+    >
+      <div class="col-6 m-5 p-5" style="background:#ebeee6">
+        <form onsubmit="my()">
+          <div class="form-group">
+            <label for="Input1">Your name*</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Input1"
+              placeholder="Enter Your Name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="Input2">Email address*</label>
+            <input
+              type="email"
+              class="form-control"
+              id="Input2"
+              placeholder="name@gmail.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="Select1">select Subject</label>
+            <select class="form-control" id="Select1">
+              <option>Complaint</option>
+              <option>Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="Textarea1"><details></details></label>
+            <textarea
+              class="form-control"
+              id="Textarea1"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="File1"></label>
+            <input
+              type="file"
+              class="form-control-file"
+              id="File1"
+            />
+            <div class="fs-6">
+              (Allowed formats: JPG, PNG, GIF. Maximum file size: 10MB)
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-md-3 col-sm-12">
+               <input type="submit" id="submitForm"  class="btn btn-primary">
+                
+                
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <hr />
+    <!--Go On Top-->
+    <div class="row justify-content-center m-5">
+      <div class="col-md-2 col-sm-12 mb-5">
+        <a href="#" class="btn btn-primary btn-lg">Go On Top</a>
+      </div>
+    </div>
+    
+    
+    <!--  FOOTER -->
+	<div th:replace="partials/_footer :: myfooter"></div>
+	<!--  /FOOTER -->
+    <script>
+   				function my(){
+     			 alert("The FeedBack has been Submitted. Thank you for you time!");
+  				 }
+				</script>
+  </body>
+</html>

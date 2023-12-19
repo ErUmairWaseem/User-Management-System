@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<htmlxmlns:th="http://www.tyhmeleaf.org"
+	 xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+	<head th:replace="partials/head :: head_section('Welcome Home Page')"></head>
+<body>
+	
+	<!--  NAVBAR -->
+		<div th:replace="partials/_navbar :: mynavbar"></div>
+	<!--  /NAVBAR -->
+	
+	 <section class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h3 class="mb-3 text-primary">ABOUT US </h3>
+                <hr/>
+                <h3>MEET OUR TEAM</h3>
+                
+            </div>
+           
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner mb-5">
+                        <div class="carousel-item active">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card ">
+                                        <img class="img-fluid " alt="100%x280" style="height: 350px; width: 320px;" src="../../../../user-profile-photos/1/20230515_225339.png">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Rishi Karan</h4>
+                                            <p class="card-text">Developer</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid " alt="100%x280" src="../../../../user-profile-photos/3/WhatsApp Image 2023-07-09 at 22.46.21.jpg" style="height: 350px;">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Umair Waseem</h4>
+                                            <p class="card-text">Developer</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280" style="height: 350px;" src="../../../../user-profile-photos/4/WhatsApp Image 2023-07-10 at 15.16.42.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Ashwini Bankat Dodke</h4>
+                                            <p class="card-text">Developer</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!--  FOOTER -->
+	<div th:replace="partials/_footer :: myfooter"></div>
+	<!--  /FOOTER -->
+
+</body>
+</html>
